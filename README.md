@@ -4,9 +4,9 @@
 
 ## 📊 Project Overview
 
-This project provides a comprehensive analysis of bank loan data through an interactive dashboard. The primary goal is to offer key insights into lending activities, risk assessment, and portfolio performance. By transforming raw loan data into actionable metrics and visualizations, the dashboard helps stakeholders monitor performance, identify trends, and make data-driven decisions.
+## This project provides a comprehensive analysis of bank loan data through an interactive dashboard. The primary goal is to offer key insights into lending activities, risk assessment, and portfolio performance. By transforming raw loan data into actionable metrics and visualizations, the dashboard helps stakeholders monitor performance, identify trends, and make data-driven decisions.
 
-The analysis covers several key areas:
+## The analysis covers several key areas:
 * **High-Level KPIs:** Tracking total loan applications, funded amounts, and interest rates.
 * **Risk Assessment:** Differentiating between "Good Loans" (fully paid, current) and "Bad Loans" (charged off) to assess portfolio risk.
 * **Trend Analysis:** Monitoring Month-to-Date (MTD), Previous Month-to-Date (PMTD), and Month-over-Month (MoM) changes in key metrics.
@@ -16,13 +16,13 @@ The analysis covers several key areas:
 
 ## <img width="1529" height="772" alt="Screenshot 2025-10-07 200116" src="https://github.com/user-attachments/assets/16dcabb0-89b2-443f-ac68-7d4746e9e1d5" />
 
-Here is a preview of the main summary dashboard created for this project.
+## Here is a preview of the main summary dashboard created for this project.
 
 
 
 ## 🎯 Key Objectives & KPIs
 
-The dashboard was designed to answer critical business questions by tracking the following Key Performance Indicators (KPIs):
+## The dashboard was designed to answer critical business questions by tracking the following Key Performance Indicators (KPIs):
 
 ### Summary KPIs
 * **Total Loan Applications:** The total number of loan applications received.
