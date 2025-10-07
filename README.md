@@ -14,7 +14,8 @@ The analysis covers several key areas:
 * **Detailed Breakdown:** Analyzing loan data across various dimensions such as loan purpose, term, employee length, home ownership, and geography.
 
 ## 📸 Dashboard Snapshot
-<img width="1529" height="772" alt="Screenshot 2025-10-07 200116" src="https://github.com/user-attachments/assets/92cda87a-d421-45da-a3d6-100968186230" />
+<img width="1523" height="772" alt="Screenshot 2025-10-07 200116" src="https://github.com/user-attachments/assets/c4475809-17be-450a-bb46-abc542f79d7d" />
+
 
 Here is a preview of the main summary dashboard created for this project.
 
