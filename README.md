@@ -1,73 +1,75 @@
 
----
-
-# Bank Loan Analysis Dashboard
+# Bank Loan Analysis Dashboard (Excel Project)
 
 ## 📊 Project Overview
 
-This project provides a comprehensive analysis of bank loan data through an interactive dashboard. The primary goal is to offer key insights into lending activities, risk assessment, and portfolio performance. By transforming raw loan data into actionable metrics and visualizations, the dashboard helps stakeholders monitor performance, identify trends, and make data-driven decisions.
+This project features a comprehensive and interactive dashboard built in **Microsoft Excel** to analyze bank loan data. The dashboard provides key insights into lending activities, portfolio health, and customer demographics, enabling stakeholders to monitor performance, assess risk, and make informed, data-driven decisions.
 
-The analysis covers several key areas:
-* **High-Level KPIs:** Tracking total loan applications, funded amounts, and interest rates.
-* **Risk Assessment:** Differentiating between "Good Loans" (fully paid, current) and "Bad Loans" (charged off) to assess portfolio risk.
-* **Trend Analysis:** Monitoring Month-to-Date (MTD), Previous Month-to-Date (PMTD), and Month-over-Month (MoM) changes in key metrics.
-* **Detailed Breakdown:** Analyzing loan data across various dimensions such as loan purpose, term, employee length, home ownership, and geography.
+The core of this project is transforming raw loan data into actionable metrics. While the final visualization and user interaction happen in Excel, the heavy lifting of data aggregation and calculation is performed using SQL.
 
-## 📸 Dashboard Snapshot
-<img width="1523" height="772" alt="Screenshot 2025-10-07 200116" src="https://github.com/user-attachments/assets/c4475809-17be-450a-bb46-abc542f79d7d" />
+## 📸 Dashboard Snapshots
+<img width="1523" height="772" alt="Screenshot 2025-10-07 200116" src="https://github.com/user-attachments/assets/ccffb43d-f7a9-4e3d-900c-4a9f55497449" />
 
+Here are previews of the dashboards, showcasing the summary and overview sections.
 
-Here is a preview of the main summary dashboard created for this project.
+### Summary Dashboard
 
+*Provides a high-level view of Key Performance Indicators (KPIs) and the overall health of the loan portfolio.*
 
+### Overview & Charts Dashboard
 
-## 🎯 Key Objectives & KPIs
+*Offers a deeper dive with visualizations for monthly trends, regional analysis, and breakdowns by loan purpose and term.*
 
-The dashboard was designed to answer critical business questions by tracking the following Key Performance Indicators (KPIs):
+## 🎯 Key Features & KPIs Tracked
 
-### Summary KPIs
-* **Total Loan Applications:** The total number of loan applications received.
-* **Month-to-Date (MTD) Applications:** The number of applications received in the current month (December).
-* **Month-over-Month (MoM) Growth:** The percentage change in loan applications compared to the previous month.
-* **Total Funded Amount:** The total amount of money disbursed to borrowers.
-* **Total Amount Received:** The total amount of money collected from borrowers.
-* **Average Interest Rate:** The average interest rate across all loans.
-* **Average Debt-to-Income (DTI) Ratio:** The average DTI for all borrowers.
+The dashboard is designed to provide answers to critical business questions by tracking:
 
-### Good Loan vs. Bad Loan Analysis
-* **Good Loan Percentage & Applications:** The count and percentage of loans that are 'Fully Paid' or 'Current'.
-* **Bad Loan Percentage & Applications:** The count and percentage of loans that are 'Charged Off'.
-* **Good/Bad Loan Funded Amount:** The total amount funded for each category.
-* **Good/Bad Loan Amount Received:** The total amount received for each category.
+#### Summary KPIs
 
----
+  * **Total Loan Applications:** Overall count of loan applications.
+  * **Month-to-Date (MTD) & Month-over-Month (MoM) Analysis:** Performance tracking for the current month compared to the previous month.
+  * **Total Funded Amount:** Total capital disbursed to borrowers.
+  * **Total Amount Received:** Total payments received from borrowers.
+  * **Average Interest Rate & Debt-to-Income (DTI):** Key metrics for assessing loan and borrower profiles.
 
-## 🛠️ Methodology & Tools
+#### Risk Assessment (Good vs. Bad Loans)
 
-1.  **Data Source:** The primary dataset used for this analysis is `financial_loan.csv`, which contains detailed information on individual loans.
-2.  **Database & SQL:** The raw data was loaded into a SQL database (likely SQL Server, based on the query syntax). A series of SQL queries, found in `DASHBOARD - 1.sql` and `DASHBOARD - 2.sql`, were written to perform the following:
-    * Calculate all the summary KPIs.
-    * Aggregate data for month-over-month comparisons.
-    * Group data by different categories (state, purpose, term, etc.) to feed into the visualizations.
-3.  **Dashboarding:** The processed data was then visualized in a business intelligence tool (like Power BI or Tableau) to create the final interactive dashboard.
+  * **Good Loan Analysis:** Tracks 'Fully Paid' and 'Current' loans (count, percentage, funded amount).
+  * **Bad Loan Analysis:** Tracks 'Charged Off' loans to quantify portfolio risk.
 
----
+#### Interactive Visualizations
 
-## 📈 Dashboard Structure
+  * **Monthly & Regional Trends:** Line charts and maps to view performance over time and across states.
+  * **Categorical Breakdowns:** Donut and Bar charts to analyze loans by **Term**, **Purpose**, **Employee Length**, and **Home Ownership**.
 
-The project is structured into three main views or dashboards as outlined in the `Problem Statements.pdf`.
+## 🛠️ Tech Stack & Methodology
 
-### Dashboard 1: Summary View
-This is the main landing page, providing a high-level overview of all the critical KPIs. It focuses on MTD and MoM performance to give a quick snapshot of current trends.
+This project follows a two-step process, combining the power of SQL for data processing with the accessibility of Excel for visualization.
 
-### Dashboard 2: Overview & Charts
-This dashboard provides detailed visualizations to explore the data from different perspectives:
-* **Monthly Trends (Line Chart):** Shows the total loan applications, funded amount, and amount received for each month.
-* **Regional Analysis (Map):** Displays the distribution of loan applications and funded amounts across different states.
-* **Loan Purpose (Bar Chart):** Breaks down the number of loans by purpose (e.g., debt consolidation, credit card, home improvement).
-* **Loan Term (Donut Chart):** Shows the split between 36-month and 60-month loan terms.
-* **Home Ownership (Tree Map):** Visualizes the metrics categorized by the borrower's home ownership status (Rent, Mortgage, Own).
-* **Employee Length (Bar Chart):** Illustrates loan metrics distributed by the borrowers' years of employment.
+1.  **Data Processing (SQL):**
 
-### Dashboard 3: Detailed View
-This section provides a complete, tabular view of the entire dataset. It acts as a one-stop solution for users who need to search, filter, and view the raw details of specific loans or customer segments.
+      * The raw data from the `bank_loan_data.csv` file was loaded into a SQL Server database.
+      * The SQL scripts (`DASHBOARD - 1.sql` and `DASHBOARD - 2.sql`) were executed to calculate all KPIs and create aggregated summary tables needed for the charts.
+
+2.  **Dashboarding (Microsoft Excel):**
+
+      * The processed data from SQL was connected to Excel.
+      * The dashboard was built using **PivotTables**, **Pivot Charts**, and **Slicers** to create a fully interactive and user-friendly experience.
+      * Formulas and conditional formatting were used to display KPIs and MoM changes effectively.
+
+## 📂 Project Structure
+
+The project is structured to deliver insights on multiple levels, as detailed in the `Problem Statements.pdf`:
+
+  * **Dashboard 1: Summary View:** A landing page with high-level KPIs for a quick performance check.
+  * **Dashboard 2: Overview & Charts:** A detailed view with various charts for deeper, exploratory analysis.
+  * **Dashboard 3: Detailed Data:** A tabular sheet containing the raw data, allowing users to search and filter for specific records.
+
+## 🚀 How to Use
+
+To replicate this project:
+
+1.  **Database Setup:** Set up a SQL database (e.g., SQL Server) and import the `bank_loan_data.csv` file.
+2.  **Run SQL Queries:** Execute the queries in `DASHBOARD - 1.sql` and `DASHBOARD - 2.sql` to generate the summary data.
+3.  **Connect to Excel:** Open the `Bank_loan DashBoard.xlsx` file. If the data connection is not live, you can paste the results from your SQL queries into the data source sheets.
+4.  **Explore:** Use the slicers and filters on the dashboard sheets to interact with the data.
