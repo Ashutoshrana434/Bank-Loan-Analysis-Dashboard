@@ -1,3 +1,5 @@
+Of course! Here is a `README.md` file based on the project files you've provided.
+
 ---
 
 # Bank Loan Analysis Dashboard
@@ -15,6 +17,7 @@ The analysis covers several key areas:
 ## 📸 Dashboard Snapshot
 
 Here is a preview of the main summary dashboard created for this project.
+
 
 
 ## 🎯 Key Objectives & KPIs
